@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Automation Suites]">
+  <listeners>
+    <listener class-name="in.zipgo.automation_framework.base.ExtentReportListener"/>
+  </listeners>
+  <test name="Web Tests(failed)" parallel="classes">
+    <classes>
+      <class name="in.zipgo.automation_framework.tests.RegressionLevelTwoCustomerApp">
+        <methods>
+          <include name="newrequest_custapp"/>
+          <include name="ractrip"/>
+          <include name="suggestnewroutes"/>
+          <include name="cancelbooking_custapp"/>
+          <include name="logout_customerapp"/>
+          <include name="tearDownTest"/>
+          <include name="setupTest"/>
+        </methods>
+      </class> <!-- in.zipgo.automation_framework.tests.RegressionLevelTwoCustomerApp -->
+    </classes>
+  </test> <!-- Web Tests(failed) -->
+</suite> <!-- Failed suite [Automation Suites] -->
