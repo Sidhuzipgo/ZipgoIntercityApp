@@ -3,13 +3,21 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="in.zipgo.automation_framework.tests.RegressionLevelOne">
+      <class name="in.zipgo.automation_framework.tests.Agentapp">
         <methods>
-          <include name="manualDelay"/>
-          <include name="tearDownTest"/>
-          <include name="setupTest"/>
+          <include name="filtercheck_agentapp"/>
+          <include name="Login_AgentApp"/>
+          <include name="BookaTicket_AgentApp"/>
+          <include name="Recharge_AgentApp"/>
+          <include name="view_more_details"/>
+          <include name="edit_booking"/>
+          <include name="Logout_agentapp"/>
+          <include name="Open_AgentApp"/>
+          <include name="Cancel_booking_agentapp"/>
+          <include name="multiple_booking_Agentapp"/>
+          <include name="partial_cancel_agentapp"/>
         </methods>
-      </class> <!-- in.zipgo.automation_framework.tests.RegressionLevelOne -->
+      </class> <!-- in.zipgo.automation_framework.tests.Agentapp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

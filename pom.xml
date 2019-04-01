@@ -9,7 +9,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <zipgo.web.url>http://beta.zipgo.in/sign_in</zipgo.web.url>
+        <zipgo.web.url>https://staging.agent.intercity.zipgo.in/#/login</zipgo.web.url>
         <zipgo.browser>CHROME</zipgo.browser>
         <zipgo.remote>false</zipgo.remote>
         <zipgo.test_type>WEB</zipgo.test_type>
@@ -77,6 +77,12 @@
             <artifactId>extentreports</artifactId>
             <version>2.41.2</version>
         </dependency>
+        
+        <dependency>
+    <groupId>net.sourceforge.jexcelapi</groupId>
+    <artifactId>jxl</artifactId>
+    <version>2.6</version>
+</dependency>
         
         <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
         <dependency>

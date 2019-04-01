@@ -2,6 +2,8 @@ package in.zipgo.automation_framework.request.data;
 
 import java.net.UnknownHostException;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Hashtable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import org.bson.Document;
@@ -35,20 +37,41 @@ public class Datatwo {
 			MongoCollection<Document> cust = db.getCollection("customers");
 
 			
-			int x=1046270;
+			int x=1046601;
 			int x1=1037854;
 			int  x4=1037729;
 			int x3=1045958;
 			int virtualwallet=0;
 			double Realwallet=0;
 			String username = "asd";
-			
+			double a=121;
 			for(Document doc1:custmoney.find()) {
 			if(doc1.containsValue(x)) 
 			{
 			        double rw=(double) doc1.get("current_value");
-			        Realwallet=rw+Realwallet;
-					System.out.println("Real Money "+rw);
+			        System.out.println("rw "+rw);
+//			        custmoney.updateOne(arg0, arg1)
+			       
+			        
+			       // double rw1=(double) doc1.put("current_value", 123);
+			       // custmoney.updateOne({ _id: doc1._id }, { current_value});
+			            
+			       
+			        
+			        
+			        
+			    	BasicDBObject newDocument = new BasicDBObject();
+			    	
+			    	BasicDBObject searchQuery = new BasicDBObject().append("current_value", rw);
+			    		
+			    	newDocument.put("$set",new BasicDBObject("current_value",a));
+
+			        custmoney.updateOne(searchQuery, newDocument);
+			        
+			        double rw1=(double) doc1.get("current_value");
+			        Realwallet=rw1+Realwallet;
+
+					System.out.println("Real Money "+Realwallet);
 			}
 			}
 			
@@ -61,6 +84,12 @@ public class Datatwo {
 				date1.format(d);
 				if(doc.containsValue(x)) {
 					double  f=(double) doc.get("balance");
+					
+
+					
+					//double  f2=(double) doc.put
+                    System.out.println("f= "+f);
+
 					//System.out.println("Virtual Money "+f);
 					Date l= (Date) doc.get("expiry_time");					
 					l.compareTo(d);

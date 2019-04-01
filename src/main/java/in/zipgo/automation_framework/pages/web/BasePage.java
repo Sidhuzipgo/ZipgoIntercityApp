@@ -313,6 +313,8 @@ public class BasePage {
 			driver.switchTo().alert().wait();
 		} catch (InterruptedException e) {}*/
    	driver.switchTo().alert().accept();
+   	//driver.switchTo().alert().dismiss();
+
    	
    	
    }
@@ -329,6 +331,7 @@ public class BasePage {
    
    public void navigatetobackpage() {
 	   driver.navigate().back();
+	   
    }
    
    public void refresh(){

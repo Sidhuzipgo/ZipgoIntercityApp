@@ -2,12 +2,11 @@ package in.zipgo.automation_framework.workflow;
 
 import in.zipgo.automation_framework.base.Configurations;
 import in.zipgo.automation_framework.base.DriverFactory;
-import in.zipgo.automation_framework.pages.mobile.DriverLandingScreen;
-import in.zipgo.automation_framework.pages.mobile.DriverLoginScreen;
+
 import in.zipgo.automation_framework.pages.web.BasePage;
-import in.zipgo.automation_framework.pages.web.HomePageDashboard;
 import in.zipgo.automation_framework.pages.web.LoginPage;
 import in.zipgo.automation_framework.pages.web.SignInPage;
+
 
 public class ZipGoWorkFlowImplementations implements ZipGoWorkflows {
 
@@ -23,10 +22,13 @@ public class ZipGoWorkFlowImplementations implements ZipGoWorkflows {
 		
 		// public LoginPage navigateToLoginPage(SignInPage signInPage) {
        // return signInPage.clickCorporateLoginButton();
-        return signInPage.clickloginwithgoogle();
+       
+    	//return signInPage.clickloginwithgoogle();
+		return null;
+
     }
 
-    @Override
+   /* @Override
     public <T extends BasePage> T loginToAsAdministrator(LoginPage loginPage, String username, String password, Class<T> clazz) {
         return loginPage.enterUsername(username)
                 .enterPassword(password)
@@ -53,5 +55,5 @@ public class ZipGoWorkFlowImplementations implements ZipGoWorkflows {
             throw new RuntimeException("Having problems instantiating the class" + clazz.getName());
         }
     }
-
+*/
 }
